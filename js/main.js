@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Cargar Header Dinámicamente
-  fetch('../components/header.html')
+  fetch('/components/header.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('header-container').innerHTML = data;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Agregar Favicon al Head
       const faviconLink = document.createElement('link');
       faviconLink.rel = 'icon';
-      faviconLink.href = '../assets/logo4.ico';
+      faviconLink.href = '/assets/logo4.ico';
       faviconLink.type = 'image/x-icon';
       document.head.appendChild(faviconLink);
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     .catch(error => console.error('Error al cargar el header:', error));
 
   // Cargar Footer Dinámicamente
-  fetch('../components/footer.html')
+  fetch('/components/footer.html')
     .then(response => response.text())
     .then(data => {
       const footerContainer = document.createElement('div');
