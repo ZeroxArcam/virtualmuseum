@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     carousel.insertBefore(lastClone, items[0]);
 
     const allItems = document.querySelectorAll('.carousel-item');
-    const itemWidth = 100; // Ajusta el ancho de los ítems
-
+    const itemWidth = 100; 
     carousel.style.transform = `translateX(-${counter * itemWidth}%)`;
 
     function updateCarousel() {
@@ -98,32 +97,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.content-item img').forEach(img => {
     img.addEventListener('click', () => {
-      const modalId = img.getAttribute('data-id'); // Obtiene el ID del modal
-      console.log('Redirigiendo a gallery.html con hash:', modalId); // Depuración
-      window.location.href = `../components/gallery.html#${modalId}`; // Redirige al modal específico
+      const modalId = img.getAttribute('data-id'); 
+      console.log('Redirigiendo a gallery.html con hash:', modalId); 
+      window.location.href = `/components/gallery.html#${modalId}`; 
     });
   });
 
 
-
-
-
-  // Funcionalidad de la Galería
   const galleryItems = document.querySelectorAll('.gallery-item img');
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
-      // Encuentra el contenedor de la imagen y la descripción asociada
       const galleryItem = item.closest('.gallery-item');
       const descriptionElement = galleryItem.querySelector('.gallery-description');
-      const modalId = item.getAttribute('data-id'); // Obtiene el identificador único del modal
-
-      // Verifica si la descripción existe y la define
+      const modalId = item.getAttribute('data-id'); 
       const description = descriptionElement ? descriptionElement.innerHTML : "<p>No description available for this artwork.</p>";
-
-      // Crear el modal con la descripción y la imagen
       const modal = document.createElement('div');
       modal.className = 'gallery-modal';
-      modal.id = modalId; // Asigna el id al modal
+      modal.id = modalId; 
       modal.innerHTML = `
           <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -135,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>`;
       document.body.appendChild(modal);
 
-      // Funcionalidad para cerrar el modal
       const closeModal = modal.querySelector('.close-modal');
       closeModal.addEventListener('click', () => modal.remove());
 
@@ -144,9 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-  // Comprobar que estás en gallery.html antes de buscar el hash
+
   if (window.location.pathname.includes('/gallery.html')) {
-    // Detectar Hash en la URL y Simular Clic en el Elemento
+
     const hash = window.location.hash.substring(1); // Obtiene el hash sin el '#'
     console.log('Hash detectado:', hash); // Depuración
     if (hash) {
