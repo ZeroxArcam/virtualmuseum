@@ -1,0 +1,239 @@
+@media (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container {
+    width: 100%;
+    padding: 0 10px;
+    /* Espacios laterales para que no quede pegado al borde */
+  }
+
+  .carousel {
+    width: 100%;
+    /* Si usas transformaciones, asegúrate de que el ancho se adapte al cambio */
+  }
+
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+
+  #canvas1 {
+    width: 100%;
+    /* O la dimensión que prefieras para el móvil */
+    max-width: 600px;
+    /* Limita el tamaño máximo en dispositivos pequeños */
+    height: auto;
+    /* Mantiene la proporción */
+    margin: 0 auto;
+    /* Asegura que quede centrado */
+  }
+
+  .audio-container audio {
+    width: 90%;
+    /* Ocupa casi todo el ancho */
+  }
+}
+
+
+body {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.813), transparent),
+    url('http://localhost:5500/assets/background.png');
+  background-color: rgba(0, 0, 0, 0.696);
+  background-blend-mode: overlay;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0;
+  font-family: 'Poppins';
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#mi-video {
+  max-width: 100%;
+  height: auto;
+  width: 854px;
+  height: 480px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* width: 100%;
+  height: 300px;
+  margin: 10px auto; */
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-item img,
+svg {
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); */
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+  font-display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: rgba(34, 31, 31, 0.742);
+}
+
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+canvas {
+  /* background-color: #111; */
+  /* border: 2px solid #b8860b;
+  box-shadow: 0 4px 15px rgba(255, 223, 0, 0.5);
+  border-radius: 8px; */
+  display: block;
+  /* Para centrarlo con margin: auto */
+  margin: 0 auto;
+}
+
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #1818184c;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.audio-container audio {
+  background-color: #181818;
+  border-radius: 10px;
+}
+
+/* Estilo para la sección de contenido principal */
+.content-section {
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #181818;
+  /* Fondo oscuro para coherencia con el tema */
+  color: #fff;
+  /* Texto blanco */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.content-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--hover-color);
+  /* Usa un color destacado */
+}
+
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.content-item {
+  width: 300px;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  /* transition: transform 0.5s ease-in-out; */
+}
+
+.content-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.content-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease-in-out;
+}
+
+.content-item h3 {
+  font-size: 1.2em;
+  margin: 10px;
+  color: #ffaa00;
+}
+
+.content-item p {
+  font-size: 0.9em;
+  margin: 10px;
+  color: #ccc;
+}

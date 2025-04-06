@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Art Museum</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+  <main>
+    <div class="carousel-container">
+      <button id="prev" class="carousel-button prev">&lt;</button>
+      <div class="carousel">
+        <div class="carousel-item">
+          <canvas id="canvas1" width="500" height="500"></canvas>
+        </div>
+        <div class="carousel-item">
+          <svg width="200" height="200">
+            <circle cx="150" cy="150" r="80" fill="orange" />
+          </svg>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/imag.svg" alt="SVG Image Description">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/svg1.svg" alt="SVG Image Description" />
+        </div>
+      </div>
+      <button id="next" class="carousel-button next">&gt;</button> <!-- Right button -->
+    </div>
+
+    <div class="video-container">
+      <video id="my-video" width="854" height="480" controls poster="assets/background.png" controls loop>
+        <source src="assets/museum.mp4" type="video/mp4">
+        Your browser does not support HTML5 videos.
+      </video>
+    </div>
+
+    <div class="content-section">
+      <h2>Virtual Art Museum Highlights</h2>
+      <div class="content-grid">
+        <div class="content-item">
+          <img src="assets/art1.png" alt="Artwork 1" data-id="modal-art1">
+          <h3>Renaissance Masterpiece</h3>
+          <p>This emblematic piece highlights the technical mastery of the Renaissance, with extraordinary details and
+            unique emotional depth.</p>
+        </div>
+        <div class="content-item">
+          <img src="assets/art2.png" alt="Artwork 2" data-id="modal-art2">
+          <h3>The Beauty of Impressionism</h3>
+          <p>Impressionist art captures fleeting moments with vibrant brushstrokes and colors that evoke deep emotions.
+          </p>
+        </div>
+        <div class="content-item">
+          <img src="assets/art3.png" alt="Artwork 3" data-id="modal-art3">
+          <h3>Modern and Innovative Art</h3>
+          <p>Discover how contemporary artists break barriers with bold creativity and revolutionary concepts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-container">
+      <audio controls>
+        <source src="assets/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-content">
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/lampCanvas.js"></script>
+</body>
+
+</html>

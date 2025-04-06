@@ -1,0 +1,98 @@
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centra horizontalmente el formulario */
+  justify-content: center;
+  /* Centra verticalmente el formulario */
+  height: 100vh;
+  /* Ocupa toda la altura de la ventana */
+  padding: 20px;
+  /* Añade un espacio alrededor para que no quede pegado */
+  box-sizing: border-box;
+  /* Asegura que el padding no desborde */
+}
+
+
+
+.contact-main form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* .contact-main form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+} */
+
+.contact-main input,
+.contact-main textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #181818;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.contact-main textarea {
+  resize: none;
+}
+
+.contact-main h2 {
+  color: #ffaa00;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  /* Centra el texto horizontalmente */
+}
+
+
+.contact-main label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.contact-main input,
+.contact-main textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #181818;
+  color: #fff;
+}
+
+.contact-main button {
+  background-color: #ffaa00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-main button:hover {
+  background-color: #ffcc33;
+}
